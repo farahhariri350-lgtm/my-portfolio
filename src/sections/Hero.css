@@ -1,0 +1,308 @@
+/* --- الإعدادات الأساسية (لا تغيريها) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222831;
+}
+
+.hero-section {
+  background-color: #222831;
+  width: 100%;
+  min-height: 1024px;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- الناف بار (تم استعادة الخط السفلي) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 96px; 
+  height: 132px;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.1); 
+}
+
+.logo { color: #EEEEEE; font-size: 24px; font-weight: bold; font-family: 'Poppins', sans-serif; }
+.nav-links { display: flex; gap: 40px; list-style: none; color: #EEEEEE; font-family: 'Poppins', sans-serif; }
+
+/* --- الخط العمودي --- */
+.center-line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(238, 238, 238, 0.2);
+  opacity: 0.1;
+  left: 512px;
+  top: 0;
+  z-index: 1;
+}
+
+/* --- السهم (Vector 187) - تعديل الزاوية فقط --- */
+.floating-arrow {
+  position: absolute;
+  width: 89.96px; 
+  height: 221.69px; 
+  top: 385px; 
+  left: 5vw;
+  opacity: 0.2; 
+  transform: rotate(-1.51deg); /* الزاوية الدقيقة من فيغما */
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* --- حاوية النصوص (ثابتة تماماً كما كانت عندك) --- */
+.hero-text {
+  position: absolute;
+  width: 586px; /* */
+  height: 192px; /* */
+  left: 180px;
+  top: 334px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.hero-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 96px; /* */
+  font-weight: 700;
+  line-height: 96px; /* */
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.hero-text h1 span {
+  color: #00ADB5;
+  display: block;
+}
+
+/* --- الأزرار (تعديل القياسات والبلور فقط) --- */
+.hero-btns {
+  display: flex;
+  gap: 24px; /* */
+}
+
+/* زر Hire me (Frame 3) */
+/* حاوية الأزرار (Frame 5) */
+.hero-btns {
+  display: flex;
+  flex-direction: row; /* ترتيب أفقي */
+  align-items: center;
+  gap: 24px; /* المسافة الدقيقة بين الزرين */
+  width: 383px; /* العرض الكلي للحاوية */
+  height: 47px; /* ارتفاع الحاوية */
+  margin-top: 48px; /* المسافة من النص أعلاه */
+}
+
+/* زر Hire me (Frame 3) */
+.btn-fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 136px; /* */
+  height: 47px; /* */
+  padding: 10px 32px; /* */
+  background-color: #00ADB5; /* */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 24px; /* */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* زر Download CV (Frame 4) */
+.btn-outline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 223px; /* */
+  height: 47px; /* */
+  padding: 10px 32px; /* */
+  /* اللون #393E46 مع شفافية 75% */
+  background-color: rgba(57, 62, 70, 0.75); /* */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 24px; /* */
+  
+  /* تأثير الغباش (Background Blur) */
+  backdrop-filter: blur(4px); /* Blur: 4 */
+  -webkit-backdrop-filter: blur(4px); /* لدعم متصفح سفاري */
+  
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* تأكدي أن الأزرار لديها مؤشر يد عند التمرير */
+.btn-fill, .btn-outline {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-fill:active {
+  transform: scale(0.95); /* تأثير بسيط عند الضغط */
+}
+
+/* تأثير عند تمرير الماوس (اختياري لجمالية التصميم) */
+.btn-fill:hover { opacity: 0.9; transform: translateY(-2px); }
+.btn-outline:hover { background-color: rgba(57, 62, 70, 0.9); transform: translateY(-2px); }
+/* --- حاوية الصور (لا تلمسيها) --- */
+.hero-images-container {
+  position: absolute;
+  width: 514px;
+  height: 514px;
+  left: 847px;
+  top: 295px;
+  z-index: 10;
+}
+
+.hero-bg-shape { width: 100%; height: 100%; }
+
+.man-image {
+  position: absolute;
+  width: 400px;
+  height: 472.65px;
+  left: -33px;
+  top: 183px;
+  z-index: 30;
+}
+
+.man-shadow {
+  position: absolute;
+  width: 348px;
+  height: 24px;
+  background: #000000;
+  opacity: 0.5;
+  border-radius: 50%;
+  left: -33px;
+  top: 543px;
+  filter: blur(15px);
+  z-index: 20;
+}
+
+/* --- ريسبونسف الموبايل البسيط جداً --- */
+/* --- ريسبونسف شامل لكل الشاشات --- */
+
+/* 1. للشاشات الكبيرة والمتوسطة (أقل من 1200px) */
+@media (max-width: 1200px) {
+  .hero-text {
+    left: 100px; /* تقريب النص من الحافة قليلاً */
+  }
+  .hero-images-container {
+    left: 70%; /* تحريك الصورة لتبقى بعيدة عن النص */
+    transform: scale(0.9); /* تصغير الحاوية قليلاً */
+  }
+  .floating-arrow {
+    left: 40px; /* تقريب السهم من الحافة */
+    transform: rotate(-169.51deg) scale(0.8); /* تصغير السهم */
+  }
+}
+
+/* 2. للشاشات المتوسطة والتابلت (أقل من 992px) */
+@media (max-width: 992px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 100px;
+  }
+
+  /* إخفاء العناصر التي تسبب زحمة */
+  .center-line, .nav-links, .floating-arrow { 
+    display: none; 
+  }
+
+  .navbar {
+    padding: 0 40px;
+    height: 80px;
+  }
+
+  .hero-text {
+    position: relative;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center; /* توسيط الأزرار والعناوين */
+    padding: 0 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 64px; /* تصغير العنوان ليناسب الشاشة */
+    line-height: 70px;
+    white-space: normal; /* السماح للنص بالنزول لسطر جديد */
+  }
+
+  .hero-btns {
+    justify-content: center; /* توسيط الأزرار */
+  }
+
+  .hero-images-container {
+    position: relative;
+    top: 60px;
+    left: 0;
+    margin: 0 auto;
+    width: 350px; /* حجم أصغر للحاوية */
+    height: 350px;
+  }
+
+  .man-image {
+    width: 300px; /* تصغير الزلمة */
+    height: auto;
+    left: 25px;
+    top: 50px;
+  }
+
+  .man-shadow {
+    width: 250px;
+    top: 340px;
+    left: 50px;
+  }
+}
+
+/* 3. للموبايل الصغير (أقل من 576px) */
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 48px; /* تصغير إضافي للموبايل */
+    line-height: 54px;
+  }
+
+  .hero-btns {
+    flex-direction: column; /* الأزرار فوق بعضها في الموبايل */
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn-fill, .btn-outline {
+    width: 280px; /* توحيد عرض الأزرار للموبايل */
+  }
+
+  .hero-images-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .man-image {
+    width: 240px;
+    left: 20px;
+  }
+}

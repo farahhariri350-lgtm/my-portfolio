@@ -1,0 +1,356 @@
+.projects-section {
+  position: relative;
+  width: 100%;
+  min-height: 1024px;
+  background-color: #222831;
+  background-image: 
+    linear-gradient(rgba(34, 40, 49, 0.85), rgba(34, 40, 49, 0.85)), 
+    url('../assets/doodle items.png');
+  background-repeat: repeat;
+  background-size: 514.67px 386px;
+  /* التعديل هنا: جعلناها تتوسط السكن دائماً لكي لا تختفي */
+  background-position: center center; 
+  padding: 80px 0; /* أضفنا Padding بدل الـ 1px لمنع التداخل مع السكشن اللي قبله */
+  overflow: hidden;
+}
+
+/* Frame 13: الحاوية الكبرى */
+.frame-13 {
+  display: flex;
+  flex-direction: column;
+  width: 1200px; /* */
+  margin-left: 120px; /* */
+  margin-top: 268px; /* */
+  gap: 48px; /* المسافة بين الهيدر والكاردات */
+}
+
+/* Frame 9: هي اللي بتمنع التصاق الأزرار بالعنوان */
+.header-frame-9 {
+  display: flex;
+  flex-direction: column;
+  width: 540px; /* */
+  gap: 16px; /* المسافة الدقيقة بين العنوان والأزرار */
+  align-items: flex-start;
+}
+
+/* التايبوغرافي للعنوان */
+.projects-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px; 
+  font-weight: 700;
+  line-height: 100%; 
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.projects-title .highlight {
+  color: #00ADB5;
+}
+
+/* Frame 8: حاوية أزرار الفلترة */
+.filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 482px; /* */
+  height: 47px; /* */
+  gap: 16px; /* المسافة بين الأزرار نفسها */
+  align-items: center;
+}
+
+/* Frame 12: حاوية الكاردات الأفقية */
+.frame-12 {
+  display: flex;
+  flex-direction: row;
+  width: 1200px; 
+  height: 350px; /* ارتفاع أكبر للـ Hover */
+  gap: 48px; /* */
+  overflow-x: auto;
+  overflow-y: visible;
+  align-items: flex-end;
+  scrollbar-width: none;
+}
+
+.frame-12::-webkit-scrollbar { display: none; }
+
+/* Frame 10: الكارد الزجاجي */
+.placeholder-box {
+  flex: 0 0 368px; /* منع انكماش العرض */
+  width: 368px; 
+  height: 280px; 
+  border-radius: 16px; 
+  background-color: rgba(57, 62, 70, 0.5); /* #393E46 50% */
+  backdrop-filter: blur(4px); /* */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.placeholder-box:hover {
+  transform: translateY(-20px);
+}
+.projects-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px; /* */
+  font-weight: 700; /* Bold */
+  line-height: 100%; /* */
+  letter-spacing: 0%; /* */
+  color: #FFFFFF;
+  margin: 0;
+  width: 540px; /* */
+}
+.projects-title .highlight {
+  color: #00ADB5; /* اللون الفيروزي المميز */
+}
+
+/* Frame 8: حاوية أزرار الفلترة */
+.filter-wrapper {
+  display: flex;
+  flex-direction: row; /* Horizontal Flow */
+  width: 482px; /* Hug (482px) */
+  height: 47px; /* Hug (47px) */
+  gap: 16px; /* المسافة بين الأزرار */
+  align-items: center;
+}
+
+.filter-btn {
+  padding: 10px 28px;
+  border-radius: 40px; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(49, 54, 63, 0.5); 
+  color: #EEEEEE;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* حالة الزر النشط (Active) */
+.filter-btn.active {
+  background-color: #00ADB5;
+  color: #222831; 
+  border-color: #00ADB5;
+  box-shadow: 0 4px 15px rgba(0, 173, 181, 0.3);
+}
+
+.filter-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* الجريد والمربعات المؤقتة (بدون صور) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.placeholder-box {
+  height: 300px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+/* الكلاس الموحد لجميع صور المشاريع داخل الكاردات */
+.project-img-content {
+  position: absolute;
+  /* القياسات الافتراضية بناءً على الصورة الأولى */
+  width: 265px;  
+  height: 158px; 
+  top: 61px;     
+  left: 51px;    
+  
+  object-fit: contain; /* يحافظ على أبعاد الـ SVG دون تشويه */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* تأثير احترافي عند الهوفر على الكارد */
+.placeholder-box:hover .project-img-content {
+  transform: translateY(-10px) scale(1.05); /* حركة للأعلى مع تكبير بسيط */
+  filter: drop-shadow(0px 15px 25px rgba(0, 173, 181, 0.3)); /* توهج بلون الثيم */
+}
+
+/* تنسيق الجروب الثاني بالملي */
+.img-id-2 {
+  position: absolute;
+  width: 368px;  /* */
+  height: 181px; /* */
+  top: 49px;     /* */
+  left: 0;       /* بما أن العرض 368 والكارد 368 فهي تتوسط تلقائياً */
+  object-fit: contain;
+}
+/* تنسيق الجروب الثالث (الموبايلات) بالملي */
+.img-id-3 {
+  position: absolute;
+  width: 359px;      /* */
+  height: 170.67px;  /* */
+  top: 55px;         /* */
+  left: 4.5px;       /* لتوسيط الصورة (368 - 359) / 2 */
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+/* حركة تفاعلية عند الهوفر للكارد الثالث */
+.placeholder-box:hover .img-id-3 {
+  transform: scale(1.08) translateY(-5px);
+}
+/* ============================================================
+   RESPONSIVE DESIGN (Media Queries) - النسخة الكاملة والمصلحة
+   ============================================================ */
+
+/* 1. للشاشات المتوسطة (Tablets & Small Laptops - 1280px or less) */
+@media (max-width: 1280px) {
+  .frame-13 {
+    width: 90%; 
+    margin-left: 5%; 
+    margin-top: 150px; 
+  }
+
+  .frame-12 {
+    width: 100%; 
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .projects-section .center-line {
+    left: 45%; 
+  }
+}
+
+/* 2. للشاشات الصغيرة (Tablets Portrait - 992px or less) */
+@media (max-width: 992px) {
+  .projects-title {
+    font-size: 52px; 
+  }
+  
+  .header-frame-9 {
+    width: 100%; 
+  }
+}
+
+/* 3. للهواتف المحمولة (Mobile Landscape & Portrait - 768px or less) */
+@media (max-width: 768px) {
+  .projects-section {
+    min-height: auto; 
+    padding-bottom: 60px;
+    background-size: 350px auto; 
+    background-position: center;
+  }
+
+  .frame-13 {
+    margin-left: 20px; 
+    margin-top: 80px;
+    gap: 32px; 
+    width: calc(100% - 40px);
+  }
+
+  .projects-title {
+    font-size: 38px; 
+    width: 100%;
+  }
+
+  /* جعل أزرار الفلترة قابلة للتمرير أفقيًا */
+  .filter-wrapper {
+    width: calc(100vw - 40px); 
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap; 
+    padding-bottom: 12px;
+    gap: 12px; 
+    scrollbar-width: none; 
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-wrapper::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .filter-btn {
+    padding: 8px 20px; 
+    font-size: 14px;
+    flex-shrink: 0; /* منع انكماش الأزرار */
+  }
+
+  /* --- إصلاح السكرول الأفقي للكاردات وإظهار طرف الكارد الثاني --- */
+  .frame-12 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* منع العناصر من النزول لسطر جديد */
+    width: 100vw !important;      /* عرض كامل الشاشة للسكرول */
+    margin-left: -20px !important; /* لتبدأ الكاردات من حافة الشاشة */
+    padding: 0 20px 30px 20px !important; /* مساحة جانبية وتحت للهوفر */
+    overflow-x: auto !important;  /* تفعيل السكرول */
+    gap: 20px !important;
+    scroll-snap-type: x mandatory; /* جذب مغناطيسي للكاردات */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin; /* إظهار بار نحيف جداً كدليل */
+  }
+
+  /* تخصيص شكل السكرول بار ليظهر كدليل بصري نحيف */
+  .frame-12::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+  }
+  .frame-12::-webkit-scrollbar-thumb {
+    background: rgba(0, 173, 181, 0.4); 
+    border-radius: 10px;
+  }
+
+  .placeholder-box {
+    /* عرض 82% يضمن ظهور "طرف" الكارد الذي يليه ليعرف المستخدم بوجود سكرول */
+    flex: 0 0 82% !important; 
+    width: 82% !important;
+    height: 250px; 
+    scroll-snap-align: start; /* يضبط الكارد عند الحافة تماماً عند السحب */
+  }
+
+  /* إخفاء الخط العمودي في الجوال لضمان نظافة التصميم */
+  .projects-section .center-line {
+    display: none;
+  }
+}
+
+/* 4. للهواتف الصغيرة جداً (Small Mobile - 480px or less) */
+@media (max-width: 480px) {
+  .placeholder-box {
+    flex: 0 0 75% !important; /* زيادة المساحة المتروكة للكارد الثاني */
+    height: 220px;
+  }
+
+  .frame-12 {
+    height: auto; 
+    gap: 15px; 
+  }
+
+  .projects-title {
+    font-size: 32px;
+  }
+
+
+  /* جعل أزرار الفلترة قابلة للتمرير أفقيًا لعدم كسر السطر */
+  .filter-wrapper {
+    width: calc(100vw - 40px); /* عرض الشاشة ناقص المارجن */
+    overflow-x: auto;
+    white-space: nowrap; /* منع نزول الأزرار لسطر جديد */
+    padding-bottom: 12px;
+    gap: 12px; /* تقليل المسافة بين الأزرار قليلاً */
+    scrollbar-width: none; /* إخفاء السكرول في فيرفوكس */
+  }
+
+  .filter-wrapper::-webkit-scrollbar {
+    display: none; /* إخفاء السكرول في كروم وسفاري */
+  }
+
+  .filter-btn {
+    padding: 8px 20px; /* تصغير حجم الأزرار قليلاً */
+    font-size: 14px;
+  }
+
+  /* إخفاء الخط العمودي في الجوال لضمان نظافة التصميم */
+  .projects-section .center-line {
+    display: none;
+  }
+}
+
+
