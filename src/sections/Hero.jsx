@@ -6,7 +6,6 @@ import doodlesBg from '../assets/doodles-mixed.svg';
 
 const Hero = () => {
 
-  // وظيفة عامة للتنقل لأي قسم عن طريق الـ ID
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -15,10 +14,13 @@ const Hero = () => {
   };
 
   const handleDownloadCV = () => {
+    // التعديل هنا: استخدام process.env.PUBLIC_URL لضمان المسار الصحيح على GitHub Pages
     const fileName = "Farah_Sholi_Hariri_CV (2).pdf"; 
+    const fileUrl = `${process.env.PUBLIC_URL}/${fileName}`;
+    
     const link = document.createElement("a");
-    link.href = `/${fileName}`; 
-    link.download = "Farah_Hariri_CV.pdf";
+    link.href = fileUrl; 
+    link.download = "Farah_Hariri_CV.pdf"; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -31,14 +33,12 @@ const Hero = () => {
       <nav className="navbar">
         <div className="logo">SaulDesign</div>
         <ul className="nav-links">
-          {/* تعديل الروابط لتنادي وظيفة السكرول عند الضغط */}
           <li onClick={() => scrollToSection('hero')} style={{cursor: 'pointer'}}>Home</li>
           <li onClick={() => scrollToSection('about')} style={{cursor: 'pointer'}}>About Me</li>
           <li onClick={() => scrollToSection('contact')} style={{cursor: 'pointer'}}>Contact</li>
         </ul>
       </nav>
 
-      {/* باقي الكود مثل ما هو */}
       <img src={vectorArrow} className="floating-arrow" alt="Vector Arrow" />
       <div className="hero-text">
         <h1>CREATIVE UI <span>DESIGNER</span></h1>
