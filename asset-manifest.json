@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.65373a69.css",
-    "main.js": "/my-portfolio/static/js/main.f0a475e8.js",
+    "main.css": "/my-portfolio/static/css/main.a63b02cb.css",
+    "main.js": "/my-portfolio/static/js/main.be9d98be.js",
     "static/js/453.15a626a8.chunk.js": "/my-portfolio/static/js/453.15a626a8.chunk.js",
     "static/media/Course Website Landing Page Thumbnail 1.svg": "/my-portfolio/static/media/Course Website Landing Page Thumbnail 1.b286ab8a4bcc00a2f77c4ffc38e07f3a.svg",
     "static/media/doodle items.png": "/my-portfolio/static/media/doodle items.8edf1aacdc27136d1c63.png",
@@ -25,12 +25,12 @@
     "static/media/vector-187.svg": "/my-portfolio/static/media/vector-187.cc77cde19fda2e525ba1d57946aa1cd5.svg",
     "index.html": "/my-portfolio/index.html",
     "static/media/Frame 24.svg": "/my-portfolio/static/media/Frame 24.7975a38a01397ee136fb887f8bc96da7.svg",
-    "main.65373a69.css.map": "/my-portfolio/static/css/main.65373a69.css.map",
-    "main.f0a475e8.js.map": "/my-portfolio/static/js/main.f0a475e8.js.map",
+    "main.a63b02cb.css.map": "/my-portfolio/static/css/main.a63b02cb.css.map",
+    "main.be9d98be.js.map": "/my-portfolio/static/js/main.be9d98be.js.map",
     "453.15a626a8.chunk.js.map": "/my-portfolio/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65373a69.css",
-    "static/js/main.f0a475e8.js"
+    "static/css/main.a63b02cb.css",
+    "static/js/main.be9d98be.js"
   ]
 }
