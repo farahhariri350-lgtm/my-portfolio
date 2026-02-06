@@ -4,54 +4,54 @@
   height: 1024px;
   background-color: #222831;
   display: flex;
-  justify-content: center; /* لضمان سنترة الـ 1440px في الشاشات الكبيرة */
+  justify-content: center; 
   overflow: hidden;
 }
 
 .contact-container {
-  width: 1440px; /* العرض الكلي للآرت بورد في فيغما */
+  width: 1440px; 
   height: 1024px;
   position: relative;
   flex-shrink: 0;
 }
 
-/* الخط الفاصل - حسب الصورة رقم 1 */
+
 .divider-line {
   position: absolute;
   width: 1px;
   height: 1024px;
-  left: 478px; /* الرقم الحرفي من فيغما */
+  left: 478px; 
   top: 0;
   background-color: #EEEEEE;
   opacity: 0.1;
   z-index: 1;
 }
 
-/* العنوان - حسب الصورة رقم 5 (البروبرتيز اللي بعتها) */
+
 .contact-heading {
   position: absolute;
-  top: 258px; /* من فيغما */
-  left: 97px;  /* من فيغما */
-  width: 600px; /* من فيغما */
+  top: 258px; 
+  left: 97px;  
+  width: 600px; 
   
-  /* التايبوغرافي الدقيق */
+
   font-family: 'Poppins', sans-serif !important;
   font-size: 64px !important;
   font-weight: 700 !important;
-  line-height: 80px !important; /* من فيغما لضمان المسافة بين السطرين */
+  line-height: 80px !important; 
   color: #FFFFFF;
   text-align: left;
   margin: 0;
   z-index: 2;
 }
 
-/* حل مشكلة لون كلمة "mind" */
+
 .contact-heading .highlight {
-  color: #00ADB5 !important; /* اللون الأزرق الفيروزي من التصميم */
+  color: #00ADB5 !important; 
   font-family: 'Poppins', sans-serif !important;
   font-weight: 700 !important;
 }
-/* الكيبورد - حسب الصورة رقم 2 */
+
 .doodle-keyboard {
   position: absolute;
   width: 139.2px;
@@ -64,13 +64,13 @@
 }
 
 
-/* الرسمة (Group 2372) */
+
 .group-2372-wrapper {
   position: absolute;
   width: 255.37px;
   height: 348px;
   top: 408px;
-  left: 317px; /* إحداثي فيغما الدقيق من الصورة */
+  left: 317px; 
   z-index: 2;
 }
 
@@ -86,32 +86,31 @@
 
 .doodle-mail {
   position: absolute;
-  /* الأبعاد الدقيقة من الصورة */
+
   width: 58.23px !important;
   height: 49.14px !important;
   
-  /* التموضع الدقيق من الصورة */
+
   top: 783px;
   left: 1200px;
   
-  /* الدوران واللون */
+
   transform: rotate(-3deg);
-  /* لصبغ الأيقونة باللون الأزرق الفيروزي (باعتبارها SVG) */
+
   filter: invert(48%) sepia(96%) saturate(1837%) hue-rotate(145deg) brightness(97%) contrast(101%);
-  opacity: 0.5; /* نسبة الـ 50% المذكورة في الصورة */
+  opacity: 0.5; 
   z-index: 1;
 }
 .vector-186 {
   position: absolute;
   width: 112.72px !important;
   height: auto;
-  top: 450px; /* من فيغما */
-  left: 118px; /* من فيغما */
+  top: 450px;
+  left: 118px; 
   transform: rotate(-30deg);
-  opacity: 0.2; /* الشفافية 20% */
-  z-index: 1;
+  opacity: 0.2;
 }
-/* Frame 19 - الحاوية الكلية للفورم */
+
 .contact-right-area {
   position: absolute;
   top: 258px;
@@ -119,58 +118,58 @@
   width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 24px !important; /* Gap بين فريم 17 الأول وفريم 17 الثاني */
+  gap: 24px !important; 
 }
 
-/* Frame 17 - الأول (Horizontal) */
+
 .frame-17-horizontal {
   display: flex;
   flex-direction: row;
   width: 600px;
-  height: 96px; /* Hug */
-  gap: 24px !important; /* Gap بين حقول الاسم والإيميل */
+  height: 96px; 
+  gap: 24px !important; 
 }
 
-/* Frame 15 - المكون الخاص بالاسم والإيميل */
+
 .frame-15-input {
   display: flex;
   flex-direction: column;
-  width: 288px; /* Fill */
-  height: 96px; /* Hug */
-  gap: 10px !important; /* Gap بين الكلمة والمربع */
+  width: 288px; 
+  height: 96px; 
+  gap: 10px !important; 
 }
 
-/* Frame 17 - العمودي (حاوية الرسالة) */
+
 .frame-17-vertical {
   display: flex;
   flex-direction: column;
-  width: 100%; /* اجعله يأخذ العرض المتاح من الأب (600px) */
+  width: 100%;
   max-width: 600px; 
-  height: auto !important; /* السماح له بالمرونة */
+  height: auto !important; 
   gap: 10px !important;
 }
 
-/* المربع الفعلي (Textarea) - Frame 14 */
+
 .textarea-frame-14 {
-  width: 100% !important; /* ليملأ الحاوية */
+  width: 100% !important; 
   max-width: 600px;
-  min-height: 200px; /* أقل ارتفاع مسموح */
-  height: 280px !important; /* الارتفاع المثالي */
+  min-height: 200px; 
+  height: 280px !important; 
   background-color: rgba(57, 62, 70, 0.5) !important;
   border-radius: 16px !important;
   
-  /* التعديل الأهم: الـ Padding */
-  padding: 16px 24px !important; /* حذفنا الـ 256px ليكون متساوي */
+
+  padding: 16px 24px !important; 
   
   border: none !important;
   color: #FFFFFF;
   resize: none;
-  box-sizing: border-box; /* لضمان عدم خروج المربع عن الحدود */
+  box-sizing: border-box; 
 }
 
-/* الحقول الصغيرة (الاسم والإيميل) */
+
 .frame-15-input input {
-  height: 54px; /* الارتفاع المتبقي من الـ 96px بعد الـ Label والـ Gap */
+  height: 54px; 
   background-color: rgba(57, 62, 70, 0.5) !important;
   border-radius: 16px !important;
   padding: 16px 24px !important;
@@ -178,7 +177,7 @@
   color: #FFFFFF;
 }
 
-/* تنسيق النصوص - Typography */
+
 .contact-right-area label {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 700 !important;
@@ -186,7 +185,7 @@
   line-height: 100%;
   color: #EEEEEE !important;
 }
-/* زر الإرسال - Frame 3 */
+
 .send-btn {
   width: 232px !important;
   height: 47px !important;
@@ -196,9 +195,9 @@
   font-weight: 700 !important;
   border: none !important;
   cursor: pointer;
-  margin-top: 8px; /* مسافة بسيطة تحت فريم الرسالة */
+  margin-top: 8px; 
 }
-/* --- تعديلات للتابلت والشاشات المتوسطة (أصغر من 1200px) --- */
+
 @media (max-width: 1200px) {
   .contact-container {
     width: 100%;
@@ -206,7 +205,7 @@
   }
   
   .contact-right-area {
-    left: 550px; /* تقريب الفورم لليسار قليلاً */
+    left: 550px; 
     width: 450px;
   }
 
@@ -215,25 +214,25 @@
   }
 
   .doodle-mail {
-    left: 90%; /* منع اختفاء الأيقونة */
+    left: 90%; 
   }
 }
 
-/* --- تعديلات الموبايل والتابلت الصغير (أصغر من 992px) --- */
+
 @media (max-width: 992px) {
   .contact-section {
-    height: auto; /* السماح للمحتوى بالتمدد طولياً */
+    height: auto; 
     padding: 80px 0;
   }
 
   .contact-container {
     height: auto;
     display: flex;
-    flex-direction: column; /* تحويل العناصر لتصبح فوق بعض */
+    flex-direction: column; 
     align-items: center;
   }
 
-  /* إلغاء التموضع المطلق للهيكل الأساسي */
+
   .contact-heading, 
   .contact-right-area,
   .divider-line {
@@ -268,7 +267,7 @@
     box-sizing: border-box;
   }
 
-  /* تحويل حقول الاسم والإيميل لتصبح فوق بعض في الموبايل */
+
   .frame-17-horizontal {
     flex-direction: column;
     height: auto;
@@ -279,27 +278,26 @@
     width: 100% !important;
   }
 
-  /* إخفاء الديكورات المزعجة في الشاشات الصغيرة لتقليل الفوضى */
+
   .doodle-keyboard, .doodle-mail, .vector-186 {
     display: none;
   }
 }
 
-/* --- تعديلات الموبايل الصغير (أصغر من 576px) --- */
-/* --- تعديلات الموبايل (Media Query) --- */
+
 @media (max-width: 768px) {
   .contact-right-area {
-    width: 90% !important; /* تصغير الحاوية الكلية */
-    left: 5% !important;   /* توسيطها */
+    width: 90% !important; 
+    left: 5% !important;  
   }
 
   .textarea-frame-14 {
-    height: 180px !important; /* تقليل الارتفاع في الموبايل ليعطي مساحة للزر */
+    height: 180px !important; 
     padding: 12px 16px !important;
   }
 
 
   .send-btn {
-    width: 100% !important; /* الزر يأخذ عرض الشاشة */
+    width: 100% !important; 
   }
 }

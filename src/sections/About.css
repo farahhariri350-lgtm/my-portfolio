@@ -1,109 +1,4 @@
-/* الحاوية الرئيسية للقسم */
-.about-section {
-  background-color: #222831;
-  width: 100%;
-  height: 1024px; /* الطول الثابت للتصميم */
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-start;
-  padding-left: 96px;
-}
 
-/* الخط العمودي المكمل */
-.about-section .center-line {
-  background-color: rgba(238, 238, 238, 0.2) !important; 
-  opacity: 0.2 !important;
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  left: 512px;
-  top: 0;
-  z-index: 1;
-}
-
-.section-divider {
-  width: 100%;
-  max-width: 1440px;
-  height: 1px; 
-  background-color: #EEEEEE;
-  opacity: 0.1; 
-  
-  position: absolute;
-  /* بدلاً من bottom، سنستخدم top بناءً على طول السكشن 1024px */
-  /* 1024 ناقص 20 أو 40 بكسل لرفعه قليلاً */
-  top: 900px; 
-  
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: block;
-}
-
-/* محتوى النصوص */
-.about-content {
-  position: absolute;
-  top: 256px;
-  left: 96px;
-  width: 389px;
-  z-index: 10;
-}
-
-.about-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 100%;
-  color: #FFFFFF;
-  margin-bottom: 32px;
-}
-
-.about-title span {
-  color: #00ADB5;
-}
-.about-description {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #FFFFFF;
-  opacity: 0.8;
-  margin-bottom: 8px;
-  
-  /* تفعيل خاصية قص النص */
-  display: -webkit-box; /* ضرورية لعمل line-clamp في المتصفحات المبنية على Webkit */
-  -webkit-box-orient: vertical; /* تحديد اتجاه الصندوق */
-  
-  /* الخاصية القياسية والنسخة المزودة ببادئة لضمان التوافق */
-  -webkit-line-clamp: 3; 
-  line-clamp: 3; 
-  
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-/* عند توسيع النص */
-.about-description.expanded {
-  -webkit-line-clamp: unset;
-  line-clamp: unset; 
-  display: block;
-}
-
-.read-more {
-  display: inline-block;
-  font-weight: 700;
-  color: #00ADB5; /* لون متناسق مع me */
-  cursor: pointer;
-  text-decoration: underline;
-  transition: 0.3s;
-}
-
-.read-more:hover {
-  color: #FFFFFF; /* تأثير عند التمرير */
-}
-
-/* القسم المرئي (الزلمة والدودلز) */
-/* الحاوية الرئيسية للقسم */
 .about-section {
   background-color: #222831;
   width: 100%;
@@ -115,18 +10,32 @@
   padding-left: 96px;
 }
 
-/* الخط العمودي المكمل (تعديل الشفافية ليصبح أغمق) */
+
 .about-section .center-line {
   position: absolute;
   width: 1px;
   height: 100%;
-  background-color: rgba(238, 238, 238, 0.4); /* غمقناه من 0.1 لـ 0.4 */
+  background-color: rgba(238, 238, 238, 0.4); 
   left: 512px;
   top: 0;
   z-index: 1;
 }
 
-/* محتوى النصوص */
+.section-divider {
+  width: 100%;
+  max-width: 1440px;
+  height: 1px;
+  background-color: #EEEEEE;
+  opacity: 0.1;
+  position: absolute;
+  top: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: block;
+}
+
+
 .about-content {
   position: absolute;
   top: 256px;
@@ -155,86 +64,69 @@
   line-height: 1.6;
   color: #FFFFFF;
   opacity: 0.8;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.about-description.expanded {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  display: block;
 }
 
 .read-more {
+  display: inline-block;
   font-weight: 700;
+  color: #00ADB5;
   cursor: pointer;
-  color: #FFFFFF;
   text-decoration: underline;
+  transition: 0.3s;
 }
+
+.read-more:hover {
+  color: #FFFFFF;
+}
+
 
 .about-visual {
   position: absolute;
-  width: 680px; 
+  width: 680px;
   height: 500px;
-  top: 230px; 
-  left: 675px; 
+  top: 230px;
+  left: 675px;
   z-index: 5;
 }
 
-.doodle-bg {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
-/* الحاوية الجديدة */
 .man-with-shadow {
   position: absolute;
-  top: 224px; /* إحداثيات الزلمة من فيغما */
+  top: 224px;
   left: 108px;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: center; /* يوسط الضل تحت الزلمة أفقياً */
+  align-items: center;
 }
 
 .about-man-main {
-  width: 412.68px; /* عرض الزلمة */
+  width: 412.68px;
   height: auto;
 }
 
 .about-shadow {
-  width: 300px; /* أصغر قليلاً من عرض الزلمة */
+  width: 300px;
   height: 20px;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 50%;
   filter: blur(3px);
-  margin-top: -2px; /* يرفع الضل ليكون تحت الكرسي تماماً */
-}
-
-/* الدودلز المتطايرة الفردية */
-.doodle-music {
-  position: absolute;
-  width: 61.54px;
-  height: 46.57px;
-  top: 135px;
-  left: 96px;
-  opacity: 0.5;
-}
-
-.doodle-light {
-  position: absolute;
-  width: 57.33px;
-  height: 88.16px;
-  top: 247.14px;
-  left: 444.68px;
-  transform: rotate(-14.82deg);
-}
-
-.doodle-arrow {
-  position: absolute;
-  width: 112.72px;
-  height: 169.89px;
-  top: 606px;
-  left: 257px;
-  transform: rotate(-163.55deg);
-  opacity: 0.2;
+  margin-top: -2px;
 }
 
 
-/* الدودلز المتطايرة الفردية */
 .doodle-music {
   position: absolute;
   width: 61.54px;
@@ -265,7 +157,7 @@
 
 @media (max-width: 992px) {
   .about-section {
-    height: auto; /* يسمح للقسم بالتمدد حسب المحتوى */
+    height: auto;
     flex-direction: column;
     padding: 60px 24px;
     align-items: center;
@@ -280,7 +172,7 @@
   }
 
   .about-content {
-    position: relative; /* إلغاء التموضع المطلق */
+    position: relative; 
     top: 0; 
     left: 0;
     width: 100%;
@@ -301,34 +193,34 @@
   }
 
   .doodle-bg {
-    position: relative; /* لتأخذ مساحتها وتدفع السكشن للأسفل */
+    position: relative; 
     width: 100%;
   }
 
   .man-with-shadow {
-    position: absolute; /* يظل فوق الدودلز */
+    position: absolute; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%); /* توسيط كامل */
+    transform: translate(-50%, -40%); 
     width: 80%;
   }
 
   .about-man-main {
-    width: 100%; /* يأخذ عرض الحاوية المصغرة */
+    width: 100%; 
   }
 
   .about-shadow {
     width: 70%;
-    margin-top: -6px; /* تعديل المسافة للموبايل */
+    margin-top: -6px; 
   }
 
-  /* إخفاء العناصر الزائدة في الشاشات الصغيرة لتجنب الفوضى */
+ 
   .center-line, .doodle-music, .doodle-light, .doodle-arrow { 
     display: none; 
   }
   .about-description {
     font-size: 16px;
-    /* خاصية القص المتوافقة مع جميع المتصفحات */
+  
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3; 
@@ -343,7 +235,6 @@
   }
 }
 
-/* تعديل إضافي للشاشات الصغيرة جداً (الموبايل) */
 @media (max-width: 480px) {
   .about-title { 
     font-size: 36px; 

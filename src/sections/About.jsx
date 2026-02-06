@@ -7,7 +7,7 @@ import lightBulb from '../assets/lightbulb.svg';
 import arrowDoodle from '../assets/vector-186.svg';
 
 const About = () => {
-  // حالة للتحكم في قراءة المزيد
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleReadMore = () => {
@@ -26,12 +26,8 @@ const About = () => {
         <div className="about-content">
           <h2 className="about-title">About <span>me</span></h2>
           
-          {/* أضفنا class "expanded" عند الضغط على الزر */}
           <p className={`about-description ${isExpanded ? 'expanded' : ''}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate 
-            libero et velit interdum, ac aliquet odio mattis. Class aptent taciti 
-            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-            Curabitur maccenas massa velit, varius a lacus sed, iaculis interdum risus.
+        I am a passionate Front-End Developer specializing in building interactive and scalable web applications using React.js. With a keen interest in Artificial Intelligence, I strive to integrate smart solutions into modern web interfaces to enhance user experience and functionality.
           </p>
           
           <span className="read-more" onClick={toggleReadMore}>

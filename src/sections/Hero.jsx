@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   const handleDownloadCV = () => {
-    // التعديل هنا: استخدام process.env.PUBLIC_URL لضمان المسار الصحيح على GitHub Pages
+ 
     const fileName = "Farah_Sholi_Hariri_CV (2).pdf"; 
     const fileUrl = `${process.env.PUBLIC_URL}/${fileName}`;
     

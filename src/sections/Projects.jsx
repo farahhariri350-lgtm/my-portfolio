@@ -21,39 +21,39 @@ const Projects = () => {
    { 
     id: 3, 
     category: 'UX', 
-    image: UXMobilesGroup, // صورة الموبايلات الثلاثة
+    image: UXMobilesGroup,
     title: 'Mobile App Design' 
   },
     
     { 
     id: 2, 
     category: 'Web Design', 
-    image: WebDesignGroup, // الصورة الكاملة للابتوب والجرافيك
+    image: WebDesignGroup, 
     title: 'Web Design Project' 
   },
-    // يمكنك إضافة الـ 6 مشاريع هنا بنفس الطريقة
+
   ];
 
-  // منطق الفلترة: يعرض الكل أو يصنف حسب الفئة المختارة
+
   const filteredProjects = activeFilter === 'All' 
     ? projectsData 
     : projectsData.filter(project => project.category === activeFilter);
 
   return (
     <section className="projects-section" id="projects">
-      {/* الخط العمودي الخلفي */}
+  
       <div className="center-line"></div>
       
-      {/* Frame 13: الحاوية الرئيسية العمودية */}
+ 
       <div className="frame-13">
         
-        {/* Frame 9: حاوية العنوان والفلتر */}
+    
         <div className="header-frame-9">
           <h2 className="projects-title">
             My recent <span className="highlight">works</span>
           </h2>
 
-          {/* Frame 8: حاوية أزرار الفلترة */}
+       
           <div className="filter-wrapper">
             {categories.map((cat) => (
               <FilterBtn 
@@ -66,11 +66,11 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Frame 12: حاوية الكاردات الأفقية */}
+    
         <div className="frame-12">
           {filteredProjects.map((project) => (
             <div key={project.id} className="placeholder-box">
-              {/* عرض الصورة فقط إذا كانت موجودة (مثل الكارد الأول) */}
+            
               {project.image ? (
                 <div className="card-content-wrapper">
                   <img 
@@ -80,7 +80,7 @@ const Projects = () => {
                   />
                 </div>
               ) : (
-                /* مكان مؤقت للكاردات التي لم تضاف صورها بعد */
+             
                 <span style={{ color: 'rgba(255,255,255,0.2)' }}>{project.title}</span>
               )}
             </div>

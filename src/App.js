@@ -9,16 +9,16 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* السكشن الأول: الهيرو */}
+    
       <Hero />
       
-      {/* السكشن الثاني: الأباوت */}
+    
       <About /> 
       
-      {/* السكشن الثالث: المشاريع */}
+
       <Projects />
 
-      {/* السكشن الرابع: التواصل - سيظهر في أسفل الصفحة */}
+   
       <Contact /> 
       <Footer/>
     </div>

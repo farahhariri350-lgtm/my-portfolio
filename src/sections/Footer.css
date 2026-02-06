@@ -4,9 +4,9 @@
   display: flex;
   justify-content: center;
   padding: 60px 0;
-  /* إضافة التموضع النسبي ليظهر الخط العمودي بداخله */
+
   position: relative; 
-  overflow: hidden; /* لمنع ظهور سكرول بسبب طول الخط */
+  overflow: hidden; 
 }
 
 .footer-container {
@@ -14,32 +14,32 @@
   max-width: 1440px; 
   display: flex;
   flex-direction: column;
-  z-index: 2; /* لضمان ظهور المحتوى فوق الخط */
+  z-index: 2;
 }
 
-/* الخط العمودي (Line 7) - تم تعديله ليظهر خلف أيقونة الهوم */
+
 .background-vertical-line {
   position: absolute;
   width: 1px;
-  height: 600px; /* طول كافٍ ليغطي الفوتر */
+  height: 600px; 
   background-color: #EEEEEE;
-  opacity: 0.1; /* شفافية 10% كما في فيجما */
-  /* التموضع ليتطابق مع الـ margin-left الخاص بالروابط */
+  opacity: 0.1; 
+ 
   left: 512px; 
   top: 0;
   z-index: 1;
 }
 
-/* 1. صف الروابط */
+
 .frame-23-nav {
   display: flex;
   flex-direction: row;
-  margin-left: 380px; /* يبدأ من عند الخط تماماً */
+  margin-left: 380px; 
   gap: 48px !important; 
   margin-bottom: 24px;
 }
 
-/* 2. صف السوشيال ميديا */
+
 .frame-28-socials {
   display: flex;
   flex-direction: row;
@@ -58,21 +58,20 @@
   align-items: center;
 }
 
-/* 3. نص الخصوصية */
+
 .policy-text {
   align-self: flex-end; 
   margin-right: 40px; 
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   color: #EEEEEE;
-  opacity: 0.75; /* شفافية 75% */
+  opacity: 0.75;
 }
 
-/* --- Responsive (الريسبونسف) --- */
 
 @media (max-width: 1024px) {
   .background-vertical-line {
-    left: 100px; /* تحريك الخط مع العناصر في التابلت */
+    left: 100px; 
   }
   .frame-23-nav, .frame-28-socials {
     margin-left: 100px;
@@ -81,7 +80,7 @@
 
 @media (max-width: 768px) {
   .background-vertical-line {
-    display: none; /* إخفاء الخط في الموبايل لترتيب أفضل */
+    display: none; 
   }
   .footer-container {
     align-items: center;

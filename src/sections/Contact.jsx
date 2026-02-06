@@ -6,30 +6,30 @@ import mailIcon from '../assets/mail.svg';
 import vectorDoodle from '../assets/vector-186.svg'; 
 
 const Contact = () => {
-  // 1. تخزين بيانات الحقول في الـ State
+ 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
 
-  // 2. تحديث البيانات عند الكتابة
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // 3. دالة الإرسال (محاكاة فقط)
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // هون بنطبع البيانات في الكونسول للتأكد إن اللوجيك شغال
+   
     console.log("تم استقبال البيانات محلياً:", formData);
 
-    // إظهار رسالة نجاح لليوزر
+
     alert(`Done! Thank you ${formData.name}, your message has been sent.`);
 
-    // مسح البيانات من الخانات بعد الإرسال
+ 
     setFormData({
       name: '',
       email: '',
